@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="5dp"
+              >
+
+    <TextView
+        android:id="@+id/topic_list_item_titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textSize="25dp"
+        android:text="Topic title"
+        android:background="#ffff725e"/>
+        <!--android:layout_marginTop="4dp"-->
+
+    <TextView
+        android:id="@+id/topic_list_item_questionsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="10 questions"
+        android:background="#ffff725e"/>
+        <!--android:layout_marginBottom="4dp-->
+
+
+</LinearLayout>
