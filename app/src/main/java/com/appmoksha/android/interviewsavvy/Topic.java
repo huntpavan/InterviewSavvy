@@ -11,9 +11,11 @@ public class Topic {
 
     private String mTitle;
     private ArrayList<QuestionAndAnswer> mQuestionAndAnswers;
+    private String mLogo;
 
-    public Topic(String title) {
+    public Topic(String title, String logo) {
         mTitle = title;
+        mLogo = logo;
         mQuestionAndAnswers = new ArrayList<QuestionAndAnswer>();
     }
 
@@ -38,4 +40,11 @@ public class Topic {
         return mQuestionAndAnswers.size();
     }
 
+    public String getLogo() {
+        return mLogo;
+    }
+
+    public void setLogo(String logo) {
+        mLogo = logo;
+    }
 }

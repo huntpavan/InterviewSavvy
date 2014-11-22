@@ -10,6 +10,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by pvatturi on 11/20/14.
@@ -32,7 +34,7 @@ public class TopicListFragment extends ListFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getListView().setDividerHeight(0);
+        //getListView().setDividerHeight(0);
     }
 
     @Override
@@ -49,6 +51,10 @@ public class TopicListFragment extends ListFragment {
 
     private class TopicAdapter extends ArrayAdapter<Topic> {
 
+        private final List<Integer> mLogoColors = Arrays.asList(
+                0xffff725e, 0xffAA66CC, 0xff99CC00, 0xffFFBB33, 0xffFF4444, 0xff33B5E5,
+                0xFFFF688C, 0xFF3787FF);
+
         public TopicAdapter(ArrayList<Topic> Topics) {
             super(getActivity(), 0, Topics);
         }
@@ -61,6 +67,11 @@ public class TopicListFragment extends ListFragment {
             }
             Topic t = getItem(position);
 
+
+            TextView logoTextView =
+                    (TextView) convertView.findViewById(R.id.topic_list_item_logoTextView);
+            logoTextView.setText(t.getLogo());
+            logoTextView.setBackgroundColor(mLogoColors.get(position % mLogoColors.size()));
 
             TextView titleTextView =
                     (TextView) convertView.findViewById(R.id.topic_list_item_titleTextView);
