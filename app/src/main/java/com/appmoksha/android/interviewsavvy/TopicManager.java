@@ -30,11 +30,11 @@ public class TopicManager {
         mTopics.add(os_topic);
 
         Topic c_topic = new Topic("C Language", "C");
-        os_topic.LoadTopic("xyz");
+        c_topic.LoadTopic("xyz");
         mTopics.add(c_topic);
 
         Topic bit_topic = new Topic("Bit Questions ", "B");
-        os_topic.LoadTopic("xyz");
+        bit_topic.LoadTopic("xyz");
         mTopics.add(bit_topic);
 
         Topic interview_topic = new Topic("Interview Questions ", "I");
