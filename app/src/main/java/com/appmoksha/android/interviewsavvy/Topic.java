@@ -40,8 +40,6 @@ public class Topic {
                 sb.append(jsonArray.getString(j));
             }
             String answer = sb.toString();
-            Log.i("Pavan", "\n\nquestion ----->>>" + question);
-            Log.i("Pavan", "\n\nanswer ----->>>" + answer);
             mQuestionAndAnswers.add(new QuestionAndAnswer(question, answer));
         }
     }

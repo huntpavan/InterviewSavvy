@@ -1,6 +1,9 @@
 package com.appmoksha.android.interviewsavvy;
 
+import android.app.ActionBar;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
@@ -56,8 +59,14 @@ public class TopicListFragment extends ListFragment {
     private class TopicAdapter extends ArrayAdapter<Topic> {
 
         private final List<Integer> mLogoColors = Arrays.asList(
-                0xffff725e, 0xffAA66CC, 0xff99CC00, 0xffFFBB33, 0xffFF4444, 0xff33B5E5,
-                0xFFFF688C, 0xFF3787FF);
+                getResources().getColor(R.color.orange),
+                getResources().getColor(R.color.purple),
+                getResources().getColor(R.color.yellow),
+                getResources().getColor(R.color.light_blue),
+                getResources().getColor(R.color.pink),
+                getResources().getColor(R.color.blue),
+                getResources().getColor(R.color.red),
+                getResources().getColor(R.color.light_green));
 
         public TopicAdapter(ArrayList<Topic> Topics) {
             super(getActivity(), 0, Topics);

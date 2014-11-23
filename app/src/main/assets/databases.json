@@ -27,12 +27,12 @@
                   "Transaction should have four properties: Atomic, Consistent, Isolated and Durable. ",
                   "These are called the ACID rules.<br><br>",
                   "<b>Atomic:</b> All operations within the transaction succeed or else they all fail.<br>",
-                  "<b>Consistent:</b> The transaction must ensure that the database is in a correct, ",
+                  "<br><b>Consistent:</b> The transaction must ensure that the database is in a correct, ",
                   "consistent state at the start and the end of the transaction. For example, no referential ",
                   "integrity constraints can be broken.<br>",
-                  "<b>Isolated:</b> All changes to the database within a transaction are isolated from ",
+                  "<br><b>Isolated:</b> All changes to the database within a transaction are isolated from ",
                   "all other transactions.<br>",
-                  "<b>Durable:</b> Once committed, changes made by a transaction are permanent."]
+                  "<br><b>Durable:</b> Once committed, changes made by a transaction are permanent."]
      }
 
   ]

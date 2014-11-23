@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.Html;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,6 +56,7 @@ public class TopicQAFragment extends Fragment {
         mAnswer = (TextView) v.findViewById(R.id.answer_textView);
         //mAnswer.setText(mTopic.getAnswer(mQid));
         mAnswer.setText(Html.fromHtml(mTopic.getAnswer(mQid)));
+        mAnswer.setMovementMethod(new ScrollingMovementMethod());
 
         return v;
 
