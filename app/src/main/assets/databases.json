@@ -1,0 +1,39 @@
+{
+  "name": "Databases",
+  "logo": "DB",
+  "qalist": [
+     {
+       "question": "What is a Database?",
+       "answer": ["Database is where you store data."]
+     },
+     {
+       "question": "What is DBMS (DataBase Management System)?",
+       "answer": ["It is a software that can store, modify and retrieve information from a database.",
+                  "<br><br><b>Examples of DBMS:</b> MySQL, Oracle, Microsoft SQL Server, IBM DB2."]
+     },
+     {
+       "question": "What is RDBMS (Relational DataBase Management System)?",
+       "answer": ["RDBMS is a type of DBMS that stores data in tables. ",
+                  "Relationships can be created between tables by having common data values between them. ",
+                  "<br><br><b>Examples of RDBMS:</b> MySQL, Oracle, Microsoft SQL Server, IBM DB2."]
+     },
+     {
+       "question": "What is SQL (Structured Query Language)?",
+       "answer": ["It is a language used to manage data stored in an RDBMS."]
+     },
+     {
+       "question": "What is a Database Transaction?",
+       "answer": ["It is a group of database operations which are executed as a single unit. ",
+                  "Transaction should have four properties: Atomic, Consistent, Isolated and Durable. ",
+                  "These are called the ACID rules.<br><br>",
+                  "<b>Atomic:</b> All operations within the transaction succeed or else they all fail.<br>",
+                  "<b>Consistent:</b> The transaction must ensure that the database is in a correct, ",
+                  "consistent state at the start and the end of the transaction. For example, no referential ",
+                  "integrity constraints can be broken.<br>",
+                  "<b>Isolated:</b> All changes to the database within a transaction are isolated from ",
+                  "all other transactions.<br>",
+                  "<b>Durable:</b> Once committed, changes made by a transaction are permanent."]
+     }
+
+  ]
+}

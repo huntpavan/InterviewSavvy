@@ -2,21 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="#FFFFFF">
 
     <TextView
         android:id="@+id/question_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:background="#FFFF688C"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:textSize="23dp"
+        android:background="#ffff6668"
         android:text="Question"/>
 
     <TextView
         android:id="@+id/answer_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:textSize="20dp"
         android:text="Answer"/>
 
 
