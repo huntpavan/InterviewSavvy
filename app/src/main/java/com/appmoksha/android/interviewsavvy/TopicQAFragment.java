@@ -1,11 +1,15 @@
 package com.appmoksha.android.interviewsavvy;
 
+import android.app.ActionBar;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -54,12 +58,17 @@ public class TopicQAFragment extends Fragment {
         mQuestion.setText(mTopic.getQuestion(mQid));
 
         mAnswer = (TextView) v.findViewById(R.id.answer_textView);
-        //mAnswer.setText(mTopic.getAnswer(mQid));
         mAnswer.setText(Html.fromHtml(mTopic.getAnswer(mQid)));
         mAnswer.setMovementMethod(new ScrollingMovementMethod());
 
         return v;
 
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.fragment_topic_qa, menu);
     }
 
 }

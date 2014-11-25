@@ -20,6 +20,7 @@ public class Topic {
     private String mTitle;
     private String mLogo;
     private ArrayList<QuestionAndAnswer> mQuestionAndAnswers;
+    private int mSize;
     private UUID mId;
 
 
@@ -42,6 +43,7 @@ public class Topic {
             String answer = sb.toString();
             mQuestionAndAnswers.add(new QuestionAndAnswer(question, answer));
         }
+        mSize = mQuestionAndAnswers.size();
     }
 
     public UUID getId() {
@@ -61,7 +63,7 @@ public class Topic {
     }
 
     public int numQuestionAndAnswers() {
-        return mQuestionAndAnswers.size();
+        return mSize;
     }
 
     public String getLogo() {
