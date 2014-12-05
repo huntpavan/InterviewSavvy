@@ -33,7 +33,99 @@
                   "<br><b>Isolated:</b> All changes to the database within a transaction are isolated from ",
                   "all other transactions.<br>",
                   "<br><b>Durable:</b> Once committed, changes made by a transaction are permanent."]
-     }
+     },
+     {
+       "question": "What is Normalization?",
+       "answer": ["The main purpose of Normalization is to minimize data redundancy. ",
+                  "<br><br>In database design , we start with one single table, with all possible columns. ",
+                  "Lot of redundant data would be present since it’s a single table. ",
+                  "<br><br>The process of removing the redundant data, by splitting up the table into ",
+                  "multiple tables with relationships is called Normalization."]
+     },
+     {
+        "question": "What is a Primary Key?",
+        "answer": ["A primary key is a column whose values uniquely identify every row in a table. ",
+                   "Primary key values can never be reused.",
+                   "If a row is deleted from the table, its primary key may not be assigned to any new rows in the future. ",
+                   "To define a field as primary key, following conditions had to be met:",
+                   "<br><br>No two rows can have the same primary key value.",
+                   "<br><br>Every row must have a primary key value.",
+                   "<br><br>Primary key field cannot be null.",
+                   "<br><br>Values in primary key columns can never be modified or updated."]
+     },
+     {
+        "question": "What is a Foreign Key?",
+        "answer": ["A foreign key is defined in the second table, which is referring the primary key of the first table."]
+     },
+     {
+        "question": "What is a Composite Key?",
+        "answer": ["A composite key is a combination of two or more columns in a table that can ",
+                   "be used to uniquely identify each row in the table."]
+     },
+     {
+        "question": "What is an SQL Insert statement?",
+        "answer": ["Used to add rows to a table."]
+     },
+     {
+        "question": "What is an SQL Update statement?",
+        "answer": ["Used to update a rows in a table."]
+     },
+     {
+        "question": "What is an SQL Delete statement?",
+        "answer": ["Used to delete rows in a table."]
+     },
+     {
+        "question": "What is a SQL Join?",
+        "answer": ["Join is used to combine data from two or more tables. ",
+                   "There are different types of joins available in SQL: ",
+                   "<br><br><b>INNER JOIN:</b> returns rows when there is a match in both tables. ",
+                   "<br><br><b>LEFT JOIN:</b> returns all rows from the left table, even if there are no matches in the right table. ",
+                   "<br><br><b>RIGHT JOIN:</b> returns all rows from the right table, even if there are no matches in the left table. ",
+                   "<br><br><b>FULL JOIN:</b> returns rows when there is a match in one of the tables.",
+                   "<br><br><b>SELF JOIN:</b> is used to join a table to itself as if the table were two tables, temporarily renaming at least one table in the SQL statement."]
+     },
+     {
+        "question": "What is a View?",
+        "answer": ["Views are virtual tables. <br><br>Unlike tables that contain data, views simply contain queries that dynamically retrieve data whenever they are used."]
+     },
+     {
+        "question": "What is a Materialized View?",
+        "answer": ["Materialized views is also a view but the result of the query associated with the it is stored on disk.",
+                   "<br><br>Materialized views get updated on specific duration, base upon the interval specified in the query definition."]
+     },
+     {
+        "question": "What are the advantages and disadvantages of views in a database?",
+        "answer": ["<b>Advantages:</b>",
+                   "<br>Views doesn't store data in a physical location.",
+                   "<br><br>View can be use to hide some of the columns from the table.",
+                   "<br><br>Views can provide Access Restriction, since data insertion, update and deletion is not possible on the view.",
+                   "<br><br><b>Disadvantages:</b>",
+                   "<br>Since view are created when a query requesting data from view is triggered, its bit slow.",
+                   "<br><br>When views are created for large tables, it occupy more memory.",
+                   "<br><br>When a table is dropped, associated view becomes irrelevant."]
 
+     },
+     {
+        "question": "What is a Stored Procedure?",
+        "answer": ["It is a group of SQL statements that can be saved in the server database. ",
+                   "<br><br>It is like a function that accepts input parameters and sends back output."]
+     },
+     {
+        "question": "What is a Trigger?",
+        "answer": ["Trigger is a set of commands that get executed when an event (like Before Insert, After Insert, On Update, On delete of a row) occurs on a table or view.",
+                   "<br><br>For ex, Triggers are used to maintain referential integrity of the data."]
+     },
+     {
+        "question": "What is an Index?",
+        "answer": ["A database index is a data structure that improves the speed of data retrieval operations on a table.",
+                   "<br><br>Indexes can be created using one or more columns of a database table.",
+                   "<br><br>The main disadvantages are slower writes and increased storage space for tables with Indexes."]
+     },
+     {
+        "question": "What is the difference between DELETE, TRUNCATE and DROP?",
+        "answer": ["The DELETE command is used to remove rows from a table. A WHERE clause can be used to only remove some rows. If no WHERE condition is specified, all rows will be removed. After performing a DELETE operation you need to COMMIT or ROLLBACK the transaction to make the change permanent or to undo it.",
+                   "<br><br>TRUNCATE removes all rows from a table. The operation cannot be rolled back. As such, TRUNCATE is faster and doesn't use as much undo space as a DELETE.",
+                   "<br><br>The DROP command removes a table from the database. All the tables' rows,  indexes and privileges will also be removed. The operation cannot be rolled back."]
+     }
   ]
 }

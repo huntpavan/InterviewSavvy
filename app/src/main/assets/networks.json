@@ -3,12 +3,200 @@
   "logo": "N",
   "qalist": [
      {
-       "question": "Networks some question - 1",
-       "answer": ["Neworks some answer - 1"]
+       "question": "What is a Network?",
+       "answer": ["Multiple computers connected to each other for communication and sharing resources."]
      },
      {
-       "question": "Networks some question - 2",
-       "answer": ["Networks some answer - 2"]
+       "question": "What is LAN (Local Area Network)?",
+       "answer": ["A computer network that connects computers in a limited area like a building."]
+     },
+     {
+       "question": "What is WAN (Wide Area Network)?",
+       "answer": ["A computer network that connects computers in a wide area like a city or country."]
+     },
+     {
+       "question": "What is Internet?",
+       "answer": ["A computer network that connects computers globally using standard protocols."]
+     },
+     {
+       "question": "What are Bits & Bytes?",
+       "answer": ["Speed of internet is measured in Mbps (Mega Bits Per Second)",
+                  "<br>Data size in computers is measured in Bytes. Ex: 1 GB, 100 MB",
+                  "<br><br>1 Byte = 8 Bits",
+                  "<br><br>Space needed to store 1 character like ‘A’ is 1 Byte (8 bits)",
+                  "<br><br>1 KB = 1024 Bytes",
+                  "<br>1 MB = 1024 KB = 1024 * 1024 Bytes"]
+     },
+     {
+       "question": "What is Network Topology?",
+       "answer": ["A way in which computers are connected in a network. Ex: ",
+                  "<br><br><b>Star:</b> A switch is at the center and all computers are connected directly to it.",
+                  "<br><br><b>Ring:</b> Each computer is connected to another computers in a circular form. ",
+                  "<br><br><b>Bus:</b> All computers are connected to a single bus.",
+                  "<br><br>Networks in real life are generally a combination of these topologies. Ex: star topology at lower level and Bus at higher level."]
+     },
+     {
+       "question": "What is the OSI Model?",
+       "answer": ["It is a reference model for how applications communicate over a network. It has 7 layers.",
+                  "<br><br><b>Physical:</b>This layer deals with actual data transfer. It means this layer deals with wires, hardware ports and connectors. Data unit is Bit. If someone says the internet is not working, first you start at the physical layer by checking for connections and cables. Then you go to the upper layers in the order. So it is important to know about Layers.",
+                  "<br><br><b>Data Link:</b>Takes the packet comes from network layer, and adds the data link header. Now the data unit is called Frame. Mac address are added here. Error checking happens in this layer using checksums. This layer has ability to check if errors are induced when data travelled in the network. Example protocols: ARP, FrameRelay.",
+                  "<br><br><b>Network:</b>This layer gets a segment from transport and adds a network header. Now the data unit is called Packet. IP address (logical address) are added here. It also selects best path. Example protocols: IPv4, IPv6, RIP, OSPF, BGP, IS-IS.",
+                  "<br><br><b>Transport:</b>Transport layer breaks the data it receives from upper layers into manageable segments.  The data unit is called Segment. It decides whether a communication is reliable (TCP) or unreliable(UDP). Reliable communication needs acknowledgment. It is slow. Unreliable communication needs no acknowledgement. It is faster. This layer also creates port numbers (source port number, destination port number). It creates a socket (ip address + port). Example protocols: TCP, UDP",
+                  "<br><br><b>Session:</b>Creates and maintains sessions. If you are using a browser and telnet simultaneously on our computer the session layer creates and maintains separate sessions for each application.",
+                  "<br><br><b>Presentation:</b>Takes data from session layer and converts data into presentable form and sends it to application later. Like if image is sent over the network, this layer reads the bytes and converts into image format and gives it to the application layer. Encryption is also handled in this layer.",
+                  "<br><br><b>Application:</b>Application: Its a point of contact for all network aware applications (Ex: browser). Some protocols that work in this layer: FTP, HTTP."]
+     },
+     {
+       "question": "What is TCP/IP Model?",
+       "answer": ["TCP/IP model is also a reference model for how applications communicate over a network. It has 4 layers. Given below are the layers and their mapping to OSI model layers.",
+                  "<br><br><b>Network Interface</b> (Physical + Data Link)",
+                  "<br><br><b>Internet</b> (Network)",
+                  "<br><br><b>Transport</b> (Transport)",
+                  "<br><br><b>Application</b> (Session + Presentation + Application)"]
+     },
+     {
+       "question": "What are the important Network troubleshooting tools?",
+       "answer": ["<b>ping:</b> Used to check network connectivity of any host or device on a network.",
+                  "<br><br><b>traceroute/tracert:</b>  Used for displaying the route and measuring transit delays of packets across IP network.",
+                  "<br><br><b>ifconfig/ipconfig:</b> Displays all current TCP/IP network configuration values and can modify Dynamic Host Configuration Protocol DHCP and Domain Name System DNS settings.",
+                  "<br><br><b>nslookup:</b> Dns lookup i.e. find ip address for a url",
+                  "<br><br><b>netstat:</b> Displays network connections for TCP (both incoming and outgoing), routing tables, and a number of network interface and network protocol statistics.",
+                  "<br><br><b>putty:</b> Is an open-source terminal emulator, serial console and network file transfer application.",
+                  "<br><br><b>speedtest.net:</b> Is a web service that measures bandwidth and latency of an internet connection.",
+                  "<br><br><b>mtr/pathping:</b> Combines ping and traceroute commands",
+                  "<br><br><b>route:</b> Displays current status of routing table on the host."]
+     },
+     {
+       "question": "What are the common network devices?",
+       "answer": ["<b>Hub: </b>A hub is a networking device with multiple ports . When a message is sent to a  port it is forwarded to all the ports in the network . Hub is used in layer 1 . Hubs can cause network congestion so it should be used in small networks ( upto 30 pcs)",
+                  "<br><br><b>Switch: </b>A switch is a networking device with multiple ports . When a message is sent to a port it forwards the packet to the designated port based on the mac address in the packet. Switch does not cause any network congestion so it should be used in medium networks (greater than 30 ). Switch is used in layer 2 and sometimes at layer 3 called as L3 switch",
+                  "<br><br><b>Router: </b>A Router is a networking device with multiple ports . When a message is sent to a port it forwards the packet to the designated port based on the ip  address in the packet . A Router acts as a gateway . It connects multiple LANS to WAN. Routers basically decides the best path between source and destination . Routers are used at layer 3."]
+     },
+     {
+       "question": "What is ARP?",
+       "answer": ["Address Resolution Protocol (ARP) is a protocol used for finding mac address. Given an ip address of a host it finds its mac address. It is a Data Link Layer protocol.",
+                  "<br><br><b>Example:</b>",
+                  "<br>Computers Matterhorn and Washington are in an office, connected to each other on the office LAN by Ethernet cables and network switches, with no intervening gateways or routers.",
+                  "<br><br>Matterhorn wants to send a packet to Washington. ",
+                  "<br><br>Through DNS, it determines that Washington's IP address is 192.168.0.55. In order to send the message, it also needs to know Washington's MAC address.",
+                  "<br><br>First, Matterhorn uses a cached ARP table in its NIC to look up 192.168.0.55 for any existing records of Washington's MAC address (00:eb:24:b2:05:ac). ",
+                  "<br><br>If the MAC address is found, it sends the IP packet on the link layer to address 00:eb:24:b2:05:ac via the ethernet cable. ",
+                  "<br><br>If the cache did not produce a result for 192.168.0.55, Matterhorn has to send a broadcast ARP message (destination FF:FF:FF:FF:FF:FF MAC address which is accepted by all computers) requesting an answer for 192.168.0.55. ",
+                  "<br><br>Washington responds with its MAC address (and its IP). Washington may insert an entry for Matterhorn into its own ARP table for future use.",
+                  "<br><br>The response information is cached in Matterhorn's ARP table and the message can now be sent."
+                  ]
+     },
+     {
+       "question": "Give examples of ARP command?",
+        "answer": [<b>ARP commands:</b>",
+                   "<br><br><b>arp -a:</b> To access the ARP cache on the NIC of your host",
+                   "<br><br><b>arp -s:</b> To add an entry to your ARP cache",
+                   "<br><br><b>arp -d:</b> To remove an entry from your ARP cache"
+                   ]
+     },
+     {
+       "question": "What is ICMP?",
+       "answer": ["Internet Control Message Protocol is Network Layer protocol that supports IP (Internet Protocol) with Error reporting and Diagnostic queries (used by Ping and Traceroute).",
+                  "<br><br>ICMPs are used by routers, intermediary devices, or hosts to communicate error information to other routers, intermediary devices, or hosts.",
+                  "<br><br> Each ICMP message (also called control information) contains three fields. They are TYPE, CODE, and CHECKSUM fields. The TYPE field identifies the ICMP message, the CODE field provides further information about the associated TYPE field, and the CHECKSUM provides a method for determining the integrity of the message. ",
+                  "<br>Ex: TYPE=3 means ‘Destination unreachable’ and CODE=5 for TYPE=3 means ‘Source route failed’",
+                  "<br><br>Understanding ICMP and knowing what can possibly generate a specific type of ICMP message (i.e. TYPE and CODE)  is useful in diagnosing network problems.",
+                  "<br><br><b>Example:</b>",
+                  "<br>Host H1 wants to send msg to H2 so it sends an IP packet.",
+                  "<br><br>There are 3 routers R1, R2 and R3 in the path.",
+                  "<br><br>H1---> R1 ---> R2 ---> R3 ---> H2",
+                  "<br><br>Lets say path between R3 and H2 is down. So R3 sets the error information in ICMP part of the IP packet and sends it back to H1 via R2 and R1. Now H1 knows about the network error between R3 and H2."]
+     },
+     {
+       "question": "What is TCP?",
+       "answer": ["Transmission Control Protocol provides reliable, ordered and error-checked delivery of a stream of bytes between two hosts.",
+                  "<br><br>Web browsers use TCP when they connect two hosts on the World Wide Web, and it is used to deliver email and transfer files from one location to another. HTTP, HTTPS, SMTP, POP3, IMAP, SSH, FTP, Telnet and a variety of other protocols typically use TCP."
+                  ]
+     },
+     {
+       "question": "What is TCP segment structure?",
+       "answer": ["TCP accepts data from an application, divides it into chunks, and adds a TCP header creating a TCP segment. The TCP segment is then encapsulated into an IP datagram, and exchanged with peers. Some of the important parts in a TCP header:",
+                  "<br><br><b>Source port:</b> Sending port number",
+                  "<br><br><b>Destination port:</b> Destination port number",
+                  "<br><br><b>Sequence number:</b> If the SYN flag is set (1), then this is the initial sequence number. If the SYN flag is clear (0), then this is the accumulated sequence number of the first data byte of this segment for the current session.",
+                  "<br><br><b>Acknowledgment number:</b> If the ACK flag is set then the value of this field is the next sequence number that the receiver is expecting.",
+                  "<br><br><b>Data offset:</b> Specifies the size of the TCP header ",
+                  "<br><br><b>Flags (control bits):</b> Some important flags are SYN, ACK, FIN, RST.",
+                  "<br><br><b>Window size:</b> Size of window in bytes that the sender of this segment is currently willing to receive. Used to for flow control.",
+                  "<br><br><b>Checksum:</b> 16 bit checksum is used for error checking of the header and data."
+                  ]
+     },
+     {
+       "question": "Explain how communication on TCP works?",
+       "answer": ["<b>Connection establishment:</b> (3 way handshake)",
+                  "<br>SYN",
+                  "<br>SYN-ACK",
+                  "<br>ACK",
+                  "<br><br><b>Data transfer:</b>",
+                  "<br>ACKs",
+                  "<br><br><b>Connection termination:</b>",
+                  "<br>FIN",
+                  "<br>FIN-ACK",
+                  "<br>ACK"]
+     },
+     {
+       "question": "What are the key features of TCP?",
+       "answer": ["<b>Ordered data transfer:</b> Sequence number help to do this.",
+                  "<br><br><b>Ordered data transfer:</b> Sequence number help to do this.",
+                  "<br><br><b>Retransmission of lost packets:</b> Acknowledge number help to do this.",
+                  "<br><br><b>Error free data transfer:</b> Checksum helps in this.",
+                  "<br><br><b>Flow control:</b> TCP uses an end-to-end flow control protocol to avoid having the sender send data too fast for the TCP receiver to receive and process it reliably. Window size helps in this.",
+                  "<br><br><b>Congestion control:</b> Acknowledgments for data sent, or lack of acknowledgments, are used by senders to infer network conditions between the TCP sender and receiver. Coupled with timers, TCP senders and receivers can alter the behavior of the flow of data. This is more generally referred to as congestion control."
+                  ]
+     },
+     {
+       "question": "What is UDP?",
+       "answer": ["UDP is a fast and unreliable protocol where hosts don’t need to set up special transmission channels or data paths to send messages. ",
+                  "<br><br>The lack of retransmission delays (unlike for TCP)  makes it suitable for real-time applications such as Voice over IP, online games, and many protocols built on top of the Real Time Streaming Protocol (RTSP).",
+                  "<br><br> It is transaction-oriented, suitable for simple query-response protocols such as the Domain Name System (DNS) or the Network Time Protocol (NTP).",
+                  "<br><br>Works well in unidirectional communication, suitable for broadcast information such as in many kinds of service discovery and shared information such as broadcast time or Routing Information Protocol (RIP)."
+                  ]
+     },
+     {
+       "question": "What is the UDP packet structure?",
+       "answer": ["UDP header consists of 4 fields. The use of fields ‘Source port’ and ‘Checksum’ is optional in IPv4. In IPv6 only the ‘Source port’ is optional.",
+                  "<br><br><b>Source port number</b>",
+                  "<br><br><b>Destination port number</b>",
+                  "<br><br><b>Length:</b> length of header + data in bytes",
+                  "<br><br><b>Checksum</b>"
+                  ]
+     },
+     {
+       "question": "What is IP?",
+       "answer": ["IP is the primary protocol that has the task of delivering (routing) packets from the source host to the destination host solely based on the IP addresses in the packet headers.",
+                  "<br><br>It is a connectionless and unreliable protocol. It means it does not guarantee delivery,  or proper sequencing or avoidance of duplicate delivery. Reliability is take care by TCP instead.",
+                  "<br><br>The first major version of IP, Internet Protocol Version 4 (IPv4), is the dominant protocol of the Internet. Its successor is Internet Protocol Version 6 (IPv6).",
+                  "<br><br> IPv4 uses 32-bit (4-bytes) addresses. IPv6 uses 128-bit(16-bytes) addresses."
+                  ]
+     },
+     {
+       "question": "What is IPv4 packet structure?",
+       "answer": ["<b>Version:</b> Tells which version of IP it is.",
+                  "<br><br><b>Internet Header Length (IHL):</b> Size of the header. As header can be variable in length.",
+                  "<br><br><b>Total Length:</b> Total packet size",
+                  "<br><br><b>Source ip address</b>",
+                  "<br><br><b>Destination ip address</b>",
+                  "<br><br><b>Header checksum:</b> For error checking of header.",
+                  "<br><br><b>Time To Live (TTL):</b> It is hop count. When the IP packet arrives at a router, the router decrements the TTL field by one. When the TTL field hits zero, the router discards the packet and typically sends an ICMP Time Exceeded message to the sender.",
+                  "<br><br><b>Flags:</b> Used to control or identify fragments.",
+                  "<br><br><b>Fragment offset:</b> Offset of a particular fragment relative to the beginning to the beginning of the original unfragmented packet."
+                  ]
+     },
+     {
+       "question": "What is IPv6 packet structure?",
+       "answer": ["<b>Version:</b> It is always going to be 6.",
+                  "<br><br><b>Payload length:</b> Similar to total length in IPv4",
+                  "<br><br><b>Source ip address</b>",
+                  "<br><br><b>Destination ip address</b>",
+                  "<br><br><b>Hop Limit:</b> Similar to TTL in IPv4",
+                  "<br><br><b>Flow label:</b> Used to track specific traffic flows at the network layer",
+                  "<br><br><b>Traffic class</b>",
+                  "<br><br><b>Next header</b>"]
      }
   ]
 }
