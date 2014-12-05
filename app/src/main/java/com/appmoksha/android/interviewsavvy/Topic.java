@@ -19,7 +19,9 @@ public class Topic {
 
     private String mTitle;
     private String mLogo;
-    private ArrayList<QuestionAndAnswer> mQuestionAndAnswers;
+    //private ArrayList<QuestionAndAnswer> mQuestionAndAnswers;
+    private ArrayList<String> mQuestions;
+    private ArrayList<String> mAnswers;
     private int mSize;
     private UUID mId;
 
@@ -28,7 +30,10 @@ public class Topic {
         mId = UUID.randomUUID();
         mTitle = jsonObject.getString("name");
         mLogo = jsonObject.getString("logo");
-        mQuestionAndAnswers = new ArrayList<QuestionAndAnswer>();
+        //mQuestionAndAnswers = new ArrayList<QuestionAndAnswer>();
+
+        mQuestions = new ArrayList<String>();
+        mAnswers = new ArrayList<String>();
 
         // Parsing list of  QuestionAndAnswers
         JSONArray qalist = jsonObject.getJSONArray("qalist");
@@ -41,9 +46,12 @@ public class Topic {
                 sb.append(jsonArray.getString(j));
             }
             String answer = sb.toString();
-            mQuestionAndAnswers.add(new QuestionAndAnswer(question, answer));
+            //mQuestionAndAnswers.add(new QuestionAndAnswer(question, answer));
+            mQuestions.add(question);
+            mAnswers.add(answer);
         }
-        mSize = mQuestionAndAnswers.size();
+        //mSize = mQuestionAndAnswers.size();
+        mSize = mQuestions.size();
     }
 
     public UUID getId() {
@@ -58,9 +66,9 @@ public class Topic {
         mTitle = title;
     }
 
-    public ArrayList<QuestionAndAnswer> getQuestionAndAnswers() {
-        return mQuestionAndAnswers;
-    }
+    //public ArrayList<QuestionAndAnswer> getQuestionAndAnswers() {
+    //    return mQuestionAndAnswers;
+    //}
 
     public int numQuestionAndAnswers() {
         return mSize;
@@ -75,10 +83,14 @@ public class Topic {
     }
 
     public String getQuestion(int qid) {
-        return mQuestionAndAnswers.get(qid).getQuestion();
+        return mQuestions.get(qid);
     }
 
     public String getAnswer(int qid) {
-        return mQuestionAndAnswers.get(qid).getAnswer();
+        return mAnswers.get(qid);
+    }
+
+    public ArrayList<String> getAllQuestions() {
+        return mQuestions;
     }
 }

@@ -7,6 +7,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -28,7 +30,7 @@ public class TopicListFragment extends ListFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActivity().setTitle(R.string.topics_title);
+        getActivity().setTitle("Topics");
 
         mTopics = TopicManager.get(getActivity()).getTopics();
         TopicAdapter adapter = new TopicAdapter(mTopics);
@@ -45,8 +47,8 @@ public class TopicListFragment extends ListFragment {
         Topic t = ((TopicAdapter) getListAdapter()).getItem(position);
         Log.d(TAG, t.getTitle() + " was clicked.");
 
-        Intent i = new Intent(getActivity(), TopicQAPagerActivity.class);
-        i.putExtra(TopicQAFragment.EXTRA_TOPIC_ID, t.getId());
+        Intent i = new Intent(getActivity(), QuestionListActivity.class);
+        i.putExtra(QuestionListFragment.EXTRA_TOPIC_ID, t.getId());
         startActivity(i);
     }
 
@@ -100,4 +102,9 @@ public class TopicListFragment extends ListFragment {
         }
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_topic_list, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
 }

@@ -31,10 +31,14 @@ public class TopicQAPagerActivity extends ActionBarActivity {
 
         final UUID topicId = (UUID) getIntent()
                 .getSerializableExtra(TopicQAFragment.EXTRA_TOPIC_ID);
+        final int qId = (int) getIntent().getIntExtra(TopicQAFragment.EXTRA_QUESTION_ID, 0);
+
+
         mTopic = TopicManager.get(this).getTopic(topicId);
         setTitle(mTopic.getTitle());
 
         FragmentManager fm = getSupportFragmentManager();
+        mViewPager.setCurrentItem(qId);
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int i, float v, int i2) {
@@ -64,5 +68,6 @@ public class TopicQAPagerActivity extends ActionBarActivity {
             }
 
         });
+        mViewPager.setCurrentItem(qId);
     }
 }

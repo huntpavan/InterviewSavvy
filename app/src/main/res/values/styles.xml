@@ -1,6 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light">-->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
 
 
@@ -9,9 +10,11 @@
 
     </style>
 
-    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
         <item name="android:background">@color/green_actionbar</item>
         <item name="background">@color/green_actionbar</item>
+        <item name="android:icon">@drawable/ic_launcher</item>
+        <item name="icon">@drawable/ic_launcher</item>
     </style>
 
 </resources>

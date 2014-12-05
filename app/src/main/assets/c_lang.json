@@ -3,12 +3,12 @@
   "logo": "C",
   "qalist": [
      {
-       "question": "net some question - 1",
-       "answer": ["net some answer - 1"]
+       "question": "C some question - 1",
+       "answer": ["C some answer - 1"]
      },
      {
-       "question": "net some question - 2",
-       "answer": ["net some answer - 2"]
+       "question": "C some question - 2",
+       "answer": ["C some answer - 2"]
      }
   ]
 }
