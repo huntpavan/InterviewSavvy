@@ -88,7 +88,7 @@
      },
      {
        "question": "Give examples of ARP command?",
-        "answer": [<b>ARP commands:</b>",
+        "answer": ["<b>ARP commands:</b>",
                    "<br><br><b>arp -a:</b> To access the ARP cache on the NIC of your host",
                    "<br><br><b>arp -s:</b> To add an entry to your ARP cache",
                    "<br><br><b>arp -d:</b> To remove an entry from your ARP cache"
@@ -175,7 +175,7 @@
                   ]
      },
      {
-       "question": "What is IPv4 packet structure?",
+       "question": "What are the important sections in IPv4 packet?",
        "answer": ["<b>Version:</b> Tells which version of IP it is.",
                   "<br><br><b>Internet Header Length (IHL):</b> Size of the header. As header can be variable in length.",
                   "<br><br><b>Total Length:</b> Total packet size",
@@ -188,7 +188,7 @@
                   ]
      },
      {
-       "question": "What is IPv6 packet structure?",
+       "question": "What are important sections in IPv6 packet?",
        "answer": ["<b>Version:</b> It is always going to be 6.",
                   "<br><br><b>Payload length:</b> Similar to total length in IPv4",
                   "<br><br><b>Source ip address</b>",

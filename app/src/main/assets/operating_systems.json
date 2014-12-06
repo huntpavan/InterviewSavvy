@@ -3,12 +3,363 @@
   "logo": "OS",
   "qalist": [
      {
-       "question": "OS some question - 1",
-       "answer": ["OS some answer - 1"]
+       "question": "What is an Operating System?",
+       "answer": ["It is an interface between user and machine. ",
+                  "<br><br>It is a resource manager. Each program gets time with the resource (cpu scheduling). Each program gets space on the resource (memory management)."]
      },
      {
-       "question": "OS some question - 2",
-       "answer": ["OS some answer - 2"]
-     }
+       "question": "List the different types of memory used in a computer from faster to slower access times?",
+       "answer": ["CPU Registers",
+                  "<br>Cache",
+                  "<br>Main Memory (RAM)",
+                  "<br>Magnetic Disk (Hard drive)",
+                  "<br>Magnetic Tape"]
+     },
+     {
+       "question": "What is a System Call?",
+       "answer": ["A System call is the mechanism used by an application program to request service from the operating system."
+                 ]
+     },
+     {
+        "question": "Give examples of UNIX system calls?",
+        "answer": ["<b>fork:</b> Create a new process",
+                   "<br><br><b>waitpid:</b> Can wait for a process to exit",
+                   "<br><br><b>execve:</b> Create process = fork + execve",
+                   "<br><br><b>exit:</b> Terminate execution",
+                   "<br><br><b>open:</b> Create a file or open an existing file",
+                   "<br><br><b>close:</b> Close a file",
+                   "<br><br><b>read:</b> Read data from file",
+                   "<br><br><b>write:</b> Write data to file",
+                   "<br><br><b>lseek:</b> Move the file pointer",
+                   "<br><br><b>stat:</b> Get various file attributes",
+                   "<br><br><b>mkdir:</b> Create a new directory",
+                   "<br><br><b>rmdir:</b> Remove an empty directory",
+                   "<br><br><b>link:</b> Make a new name for a file",
+                   "<br><br><b>ulink:</b> Destroy an existing file",
+                   "<br><br><b>mount:</b> Mount filesystems",
+                   "<br><br><b>umount:</b> Unmount filesystems",
+                   "<br><br><b>chdir:</b> Change the current working directory",
+                   "<br><br><b>chmod:</b> Change permissions of a file",
+                   "<br><br><b>kill:</b> Send a signal to a process",
+                   "<br><br><b>time:</b> Get the current time",
+                   ""]
+     },
+     {
+        "question": "What is a Process?",
+        "answer": ["A process is just an executing program, with its own address space including the current values of the program counter, registers, and variables.",
+                   "<br><br>A program counter is a register in a computer processor which indicates where the computer is in its instruction sequence.",
+                   ""]
+     },
+     {
+       "question": "What are the different Process states?",
+       "answer": ["<b>Running:</b> Process is running",
+                  "<br><br><b>Blocked:</b> Process is blocked for input",
+                  "<br><br><b>Ready:</b> When the input becomes available, the process moves to Ready state to be picked up by Scheduler.",
+                  ""]
+     },
+     {
+        "question": "How is a Process implemented in OS?",
+        "answer": ["To implement the process model, the operating system maintains a table (an array of structures), called the <b>Process Table</b>, with one entry per process.",
+                   "<br><br>This entry contains information about the process state like its program counter, stack pointer etc. so that when the process is switched from running to ready or blocked state it can be restarted later as if it had never been stopped.",
+                   ""]
+     },
+     {
+        "question": "What is a Thread?",
+        "answer": ["It is a sequence of execution. In general, a thread is contained inside a process and different threads of the same process share some resources while different processes do not.",
+                   "b<br><br>The term multi-threading is also used to describe the situation of allowing multiple threads in the same process.",
+                   ""]
+     },
+     {
+        "question": "What is the difference between Process and Thread?",
+        "answer": ["Process may contain more than one thread. All threads in a process operate in the same address space. Each process has its own address space.",
+                   "<br><br>Process-based multitasking has a larger overhead than thread-based multitasking. Process-based multitasking requires context-switching and also need additional resources for a process to communicate with each other.",
+                   "<br><br>The threads in thread-based multitasking share the same address space in memory because they share the same program. Likewise, communication among parts of the program happens within the same shared memory location.",
+                   ""]
+      },
+      {
+         "question": "What is a Race Condition?",
+         "answer": ["When two or more processes are reading or writing some shared data and the final result depends on who runs precisely when, are called race conditions.",
+                    ""]
+      },
+      {
+         "question": "What is Mutual Exclusion?",
+         "answer": ["To prevent race conditions, what we need is mutual exclusion, that is, some way of making sure that if one process is using a shared variable or file, the other processes will be excluded from doing the same thing.",
+                    ""]
+      },
+      {
+        "question": "What is Critical Section?",
+        "answer": ["Part of the time, a process is busy doing internal computations and other things that do not lead to race conditions. However, sometimes a process have to access shared memory or files, or doing other critical things that can lead to races.",
+                   "<br><br>That part of the program where the shared memory is accessed is called the critical region or critical section.",
+                   ""]
+      },
+      {
+         "question": "What are 4 conditions to provide Mutual Exclusion?",
+         "answer": ["No two processes may be simultaneously inside their critical regions.",
+                    "<br><br>No assumptions may be made about speeds or the number of CPUs.",
+                    "<br><br>No process running outside its critical region may block other processes.",
+                    "<br><br>No process should have to wait forever to enter its critical region.",
+                    ""]
+      },
+      {
+         "question": "What are the tools to maintain Mutual Exclusion?",
+         "answer": ["<b>Semaphores (and mutexes):</b> Semaphore is a variable used for restricting access to shared resources. There are counting semaphores and binary semaphores(mutexes).",
+                    "<br><br><b>Monitors:</b> Monitor is a synchronization construct that allows threads to have both mutual exclusion and the ability to wait (block) for a certain condition to become true.",
+                    ""]
+      },
+      {
+        "question": "What is a Producer-Consumer problem?",
+        "answer": ["Two processes share a common, fixed-size buffer. One of them, the producer, puts information into the buffer, and the other one, the consumer, takes it out.",
+                   "<br><br><b>Solution:</b> Access to the  buffer can be controlled using semaphores or monitors and mutual exclusion can be obtained.",
+                   ""]
+     },
+     {
+        "question": "What is Dining Philosophers problem?",
+        "answer": ["Five philosophers are seated around a circular table. Each philosopher has a plate of spaghetti. The spaghetti is so slippery that a philosopher needs two forks to eat it. Between each pair of plates is one fork.",
+                   "<br><br>The life of a philosopher consists of alternate periods of eating and thinking. When a philosopher gets hungry, she tries to acquire her left and right fork, one at a time, in either order. If successful in acquiring two forks, she eats for a while, then puts down the forks, and continues to think.",
+                   "<br><br>The key question is: Can you write a program for each philosopher that does what it is supposed to do and never gets stuck?",
+                   "<br><br><b>Solution:</b> It uses an array, state, to keep track of whether a philosopher is eating, thinking, or hungry (trying to acquire forks). A philosopher may move only into eating state if neither neighbor is eating. The program uses an array of semaphores, one per philosopher, so hungry philosophers can block if the needed forks are busy. ",
+                   ""]
+     },
+     {
+        "question": "What is Reader Writer problem?",
+        "answer": ["Imagine, for example, an airline reservation system, with many competing processes wishing to read and write it.",
+                   "<br><br>It is acceptable to have multiple processes reading the database at the same time, but if one process is updating (writing) the database, no other processes may have access to the database, not even readers.",
+                   "<br><br>The question is how do you program the readers and the writers? ",
+                   "<br><br><b>Solution:</b>  In this solution, the first reader to get access to the database does a down on the semaphore db. Subsequent readers merely increment a counter, rc. As readers leave, they decrement the counter and the last one out does an up on the semaphore, allowing a blocked writer, if there is one, to get in.",
+                   "<br><br>When a reader arrives and a writer is waiting, the reader is suspended behind the writer instead of being admitted immediately. In this way, a writer has to wait for readers that were active when it arrived to finish but does not have to wait for readers that came along after it.",
+                   ""]
+     },
+     {
+        "question": "What is CPU Scheduling?",
+        "answer": ["When a computer is multiprogrammed, it frequently has multiple processes competing for the CPU at the same time. This situation occurs whenever two or more processes are simultaneously in the ready state. ",
+                   "<br><br>If only one CPU is available, a choice has to be made which process to run next. The part of the operating system that makes the choice is called the scheduler and the algorithm it uses is called the scheduling algorithm. ",
+                   "<br><br>In different environments different scheduling algorithms are needed.",
+                   "<br>Three environments worth distinguishing are <b>Batch, Interactive and Real-Time</b>.",
+                   ""]
+     },
+     {
+        "question": "What are Batch systems?",
+        "answer": ["In batch systems, there are no users impatiently waiting at their terminals for a quick response.",
+                   "<br><br>Consequently, nonpreemptive algorithms, or preemptive algorithms with long time periods for each process are often acceptable.",
+                   "<br><br>This approach reduces process switches and thus improves performance. Scheduling algorithms that are suitable mainly for Batch systems are:",
+                   "<br><br><b>First Come First Served</b>",
+                   "<br><b>Shortest Job First</b>",
+                   "<br><b>Shortest remaining time next</b>",
+                   ""]
+     },
+     {
+        "question": "What is First Come First Served scheduling algorithm?",
+        "answer": ["Its a non-preemptive scheduling algorithm. Processes are assigned the CPU in the order they request it. ",
+                   "<br><br>Basically, there is a single queue of ready processes. When the first job enters the system from the outside in the morning, it is started immediately and allowed to run as long as it wants to.",
+                   "<br><br>As other jobs come in, they are put onto the end of the queue. When the running process blocks, the first process on the queue is run next.",
+                   "<br><br>When a blocked process becomes ready, like a newly arrived job, it is put on the end of the queue.",
+                   ""]
+      },
+      {
+         "question": "What is Shortest Job First scheduling algorithm?",
+         "answer": ["Its another non-preemptive batch scheduling algorithm, where several equally important jobs are sitting in the input queue waiting to be started, the scheduler picks the shortest job first. The run time of each job has to be known in advance.",
+                    ""]
+      },
+      {
+         "question": "What is Shortest Remaining Time Next scheduling algorithm?",
+         "answer": ["A preemptive version of shortest job first is shortest remaining time next. With this algorithm, the scheduler always chooses the process whose remaining run time is the shortest. ",
+                    "<br><br>Again here, the run time has to be known in advance. When a new job arrives, its total time is compared to the current process’ remaining time. ",
+                    "<br><br>If the new job needs less time to finish than the current process, the current process is suspended and the new job started. This scheme allows new short jobs to get good service.",
+                    ""]
+      },
+      {
+        "question": "What are Interactive Systems?",
+        "answer": ["Preemption is essential to keep one process from hogging the CPU and denying service to the others.",
+                   "<br><br>Scheduling algorithms that are suitable mainly for Interactive systems are:",
+                   "<br><b>Round Robin</b>",
+                   "<br><b>Priority scheduling</b>",
+                   "<br><b>Shortest Process next</b>",
+                   "<br><b>Guaranteed scheduling</b>",
+                   "<br><b>Lottery scheduling</b>",
+                   "<br><b>Fair Share scheduling</b>",
+                   "<br><b>Completely Fair scheduling</b>",
+                   ""]
+      },
+      {
+         "question": "What is Round Robin Scheduling?",
+         "answer": ["Each process is assigned a time interval, called its quantum, which it is allowed to run. If the process is still running at the end of the quantum, the CPU is preempted and given to another process.",
+                    "<br><br>If the process has blocked or finished before the quantum has elapsed, the CPU switching is done when the process blocks, of course.",
+                    "<br><br>Setting the quantum too short causes too many process switches and lowers the CPU efficiency, but setting it too long may cause poor response to short interactive requests. A quantum around 20-50 msec is often a reasonable compromise.",
+                    ""]
+      },
+      {
+         "question": "What is Priority scheduling?",
+         "answer": ["Each process is assigned a priority, and the runnable process with the highest priority is allowed to run. To prevent high-priority processes from running indefinitely, the scheduler may decrease the priority of the currently running process at each clock tick (i.e., at each clock interrupt).",
+                    "<br><br>If this action causes its priority to drop below that of the next highest process, a process switch occurs. Alternatively, each process may be assigned a maximum time quantum that it is allowed to run.",
+                    "<br><br>When this quantum is used up, the next highest priority process is given a chance to run.",
+                    ""]
+      },
+      {
+         "question": "What is Shortest Process next scheduling?",
+         "answer": ["Because shortest job first always produces the minimum average response time for batch systems, it would be nice if it could be used for interactive processes as well. ",
+                    "<br><br>The only problem is figuring out which of the currently runnable processes is the shortest one. One approach is to make estimates based on past behavior and run the process with the shortest estimated running time. ",
+                    "<br><br>The technique of estimating the next value in a series by taking the weighted average of the current measured value and the previous estimate is sometimes called aging. ",
+                    ""]
+      },
+      {
+         "question": "What is Guaranteed scheduling?",
+         "answer": ["A completely different approach to scheduling is to make real promises to the users about performance and then live up to them. ",
+                    "<br><br>One promise that is realistic to make and easy to live up to is this: If there are n users logged in while you are working, you will receive about 1/n of the CPU power. Similarly, on a single user system with n processes running, all things being equal, each one should get 1/n of the CPU cycles. ",
+                    "<br><br>To make good on this promise, the system must keep track of how much CPU each process has had since its creation. It then computes the amount of CPU each one is entitled to, namely the time since creation divided by n. ",
+                    ""]
+      },
+      {
+         "question": "What is Lottery scheduling?",
+         "answer": ["The basic idea is to give processes lottery tickets for various system resources, such as CPU time. Whenever a scheduling decision has to be made, a lottery ticket is chosen at random, and the process holding that ticket gets the resource. ",
+                    "<br><br>When applied to CPU scheduling, the system might hold a lottery 50 times a second, with each winner getting 20 msec of CPU time as a prize. More important processes can be given extra tickets, to increase their odds of winning.",
+                    "<br><br>Cooperating processes may exchange tickets if they wish. ",
+                    ""]
+      },
+      {
+         "question": "What is Fair Share scheduling?",
+         "answer": ["So far we have assumed that each process is scheduled on its own, without regard to who its owner is. As a result, if user 1 starts up 9 processes and user 2 starts up 1 process, with round robin or equal priorities, user 1 will get 90% of the CPU and user 2 will get only 10% of it.",
+                    "<br><br>To prevent this situation, some systems take into account who owns a process before scheduling it. In this model, each user is allocated some fraction of the CPU and the scheduler picks processes in such a way as to enforce it. ",
+                    "<br><br>Thus if two users have each been promised 50% of the CPU, they will each get that, no matter how many processes they have in existence.",
+                    ""]
+      },
+      {
+         "question": "What are Real Time Systems?",
+         "answer": ["A real-time system is one in which time plays an essential role. Typically, one or more physical devices external to the computer generate stimuli, and the computer must react appropriately to them within a fixed amount of time.",
+                    "<br><br>In systems with real-time constraints, preemption is, oddly enough, sometimes not needed because the processes know that they may not run for long periods of time and usually do their work and block quickly.",
+                    "<br><br>The difference with interactive systems is that real-time systems run only programs that are intended to further the application at hand. Interactive systems are general purpose and may run arbitrary programs that are not cooperative or even malicious.",
+                    "<br><br>Real-time systems are generally categorized as hard real time, meaning there are absolute deadlines that must be met, or else, and soft real time, meaning that missing an occasional deadline is undesirable, but nevertheless tolerable.",
+                    ""]
+      },
+      {
+         "question": "What is a Deadlock?",
+         "answer": ["A set of processes is deadlocked if each process in the set is waiting for an event that only another process in the set can cause.",
+                    "<br><br>Conditions for deadlock:",
+                    "<br><br><b>Mutual exclusion condition.</b> Each resource is either currently assigned to exactly one process or is available.",
+                    "<br><br><b>Hold and wait condition.</b> Processes currently holding resources granted earlier can request new resources.",
+                    "<br><br><b>No preemption condition.</b> Resources previously granted cannot be forcibly taken away from a process. They must be explicitly released by the process holding them.",
+                    "<br><br><b>Circular wait condition.</b> There must be a circular chain of two or more processes, each of which is waiting for a resource held by the next member of the chain.",
+                    ""]
+      },
+      {
+         "question": "What are different ways to deal with Deadlocks?",
+         "answer": ["<b>Just ignore the problem altogether:</b> The Ostrich algorithm, UNIX and Windows take this approach.",
+                    "<br><br><b>Detection and recovery</b>",
+                    "<br><br><b>Dynamic avoidance</b>",
+                    "<br><br><b>Prevention</b>",
+                    ""]
+      },
+      {
+         "question": "What are the different Deadlock Detection and Recovery methods?",
+         "answer": ["<b>Construct a resource graph.</b> If this graph contains one or more cycles, a deadlock exists. Any process that is part of a cycle is deadlocked.",
+                    "<br><br><b>Recovery through preemption:</b> Temporarily take a resource away from its current owner and give it to another process.",
+                    "<br><br><b>Recovery through rollback:</b> Arrange to have processes checkpointed periodically. Checkpointing a process means that its state is written to a file so that it can be restarted later. The checkpoint contains not only the memory image, but also the resource state, that is, which resources are currently assigned to the process. When a deadlock is detected, it is easy to see which resources are needed. To do the recovery, a process that owns a needed resource is rolled back to a point in time before it acquired some other resource by starting one of its earlier checkpoints. All the work done since the checkpoint is lost.",
+                    "<br><br><b>Recovery through killing process:</b> The crudest, but simplest way to break a deadlock is to kill one or more processes. One possibility is to kill a process in the cycle. With a little luck, the other processes will be able to continue. If this does not help, it can be repeated until the cycle is broken.",
+                    ""]
+      },
+      {
+         "question": "What are the different Deadlock Dynamic avoidance methods?",
+         "answer": ["<b>Safe and Unsafe states:</b> A state is said to be safe if it is not deadlocked and there is some scheduling order in which every process can run to completion even if all of them suddenly request their maximum number of resources immediately.",
+                    "<br><br><b>Banker's algorithm:</b>  It checks to see if granting the request leads to an unsafe state. If it does, the request is denied. If granting the request leads to a safe state, it is carried out. To do this we need information about future requests by processes.",
+                    "<br><br>Deadlock avoidance is essentially impossible, because it requires information about future requests, which is not known.",
+                    ""]
+      },
+     {
+         "question": "What are the different Deadlock Prevention methods?",
+         "answer": ["It is about negating one of the four necessary conditions of Deadlock.",
+                    "<br><br><b>Attacking the Mutual Exclusion Condition:</b> Avoid assigning a resource when that is not absolutely necessary, and try to make sure that as few processes as possible may actually claim the resource.",
+                    "<br><br><b>Attacking the Hold and Wait Condition:</b> One way to achieve this goal is to require all processes to request all their resources before starting execution. If everything is available, the process will be allocated whatever it needs and can run to completion. If one or more resources are busy, nothing will be allocated and the process would just wait.",
+                    "<br><br><b>Attacking the No Preemption Condition.</b>",
+                    "<br><br><b>Attacking the Circular Wait Condition:</b> One way is simply to have a rule saying that a process is entitled only to a single resource at any moment. If it needs a second one, it must release the first one.",
+                    ""
+                    ]
+     },
+     {
+         "question": "What is Memory Management?",
+         "answer": ["It is the act of managing computer memory at the system level.",
+                    "<br><br>There are two general approaches to memory management",
+                    "<br><br><b>Swapping:</b> Bringing in each process in its entirety, running it for a while, then putting it back on the disk. When memory is assigned dynamically, the operating system must manage it.",
+                    "<br><br><b>Virtual Memory:</b> Allows programs to run even when they are only partially in main memory. The basic idea behind virtual memory is that the combined size of the program, data, and stack may exceed the amount of physical memory available for it. The operating system keeps those parts of the program currently in use in main memory, and the rest on the disk. Most virtual memory systems use a technique called <b>Paging</b>.",
+                    "<br><br>",
+                    ""
+                    ]
+     },
+     {
+         "question": "How does Swapping works?",
+         "answer": ["There are two ways to keep track of memory usage during Swapping:",
+                    "<br><br><b>Bitmaps:</b> With a bitmap, memory is divided up into allocation units, perhaps as small as a few words and perhaps as large as several kilobytes. Corresponding to each allocation unit is a bit in the bitmap, which is 0 if the unit is free and 1 if it is occupied.",
+                    "<br><br>The main problem with it is that when it has been decided to bring a k unit process into memory, the memory manager must search the bitmap to find a run of k consecutive 0 bits in the map. Searching a bitmap for a run of a given length is a slow operation.",
+                    "<br><br><b>Free lists:</b> Maintain a linked list of allocated and free memory segments, where a segment is either a process or a hole between two processes.",
+                    ""
+                    ]
+     },
+     {
+         "question": "How does Virtual Memory works?",
+         "answer": ["OS takes care of all aspects of address translation. Gives the user process the illusion that it has its own address space starting from 0.",
+                    "<br><br>The user process address space can be larger than main memory. Thus, the actual size of the user process can be larger than main memory. ",
+                    "<br><br>Loads the pieces of the process that are needed immediately during execution. Other parts of the process can be stored in the swap space (backing store)",
+                    "<br><br>The main assumptions are: instructions being used must be in main memory, operands must be in main memory, swap space (disk) must be large enough to hold all parts of all processes currently in execution.",
+                    "<br><br><b>Disadvantages:</b> can be slow because the running process stops whenever a required page is in the swap space.",
+                    "<br><br><b>Advantages:</b> can have processes larger than available memory, OS (and not the programmer) manages the details, performance is satisfactory when we have locality of reference",
+                    ""
+                    ]
+     },
+     {
+         "question": "What is Locality of Reference?",
+         "answer": ["Locality of reference is a phenomenon describing the same value, or related storage locations, being frequently accessed. There are two basic types of reference locality – temporal and spatial locality.",
+                    "<br><br>Temporal locality refers to the reuse of specific data, and/or resources, within a relatively small time duration. ",
+                    "<br><br>Spatial locality refers to the use of data elements within relatively close storage locations.",
+                    ""
+                    ]
+     },
+     {
+         "question": "What is a Virtual address?",
+         "answer": ["Program-generated addresses are called virtual addresses and form the virtual address space.",
+                    "<br><br>On computers without virtual memory, the virtual address is put directly onto the memory bus and causes the physical memory work with the same address to be read or written.",
+                    "<br><br>When virtual memory is used, the virtual addresses do not go directly to the memory bus. Instead, they go to an MMU (Memory Management Unit) that maps the virtual addresses onto the physical memory addresses.",
+                    ""
+                    ]
+     },
+     {
+         "question": "What is a Page?",
+         "answer": ["The virtual address space is divided up into units called pages. The corresponding units in the physical memory are called page frames.",
+                    "<br><br>The pages and page frames are always the same size. In the actual hardware, a Present/absent bit keeps track of which pages are physically present in memory.",
+                    "<br><br>If the program tries to use an unmapped page, the MMU notices that the page is unmapped and causes the CPU to trap to the operating system. This trap is called a page fault.",
+                    "<br><br>The operating system picks a little-used page frame and writes its contents back to the disk. It then fetches the page just referenced into the page frame just freed, changes the map, and restarts the trapped instruction.",
+                    ""
+                    ]
+     },
+     {
+         "question": "What is a Page Table?",
+         "answer": ["The purpose of the page table is to map virtual pages onto page frames.",
+                    "<br><br>In the simplest case, the virtual address is split into a virtual page number (high-order bits) and an offset (low-order bits).",
+                    "<br><br>For example, with a 16-bit address and a 4-KB page size, the upper 4 bits could specify one of the 16 virtual pages and the lower 12 bits would then specify the byte offset (0 to 4095) within the selected page.",
+                    "<br><br>The virtual page number is used as an index into the page table to find the entry for that virtual page. From the page table entry, the page frame number (it any) is found.",
+                    "<br><br>The page frame number is attached to the high-order end of the offset, replacing the virtual page number, to form a physical address that can be sent to the memory.",
+                    ""
+                    ]
+     },
+     {
+           "question": "What is Translation Lookaside Buffer (TLB)?",
+           "answer": ["In most paging schemes, the page tables are kept in memory and due to their large size have enormous impact on performance.",
+                      "<br><br>A solution is based on the observation that most programs tend to make a large number of references to a small number of pages, and not the other way around. Thus only a small fraction of the page table entries are heavily read; the rest are barely used at all.",
+                      "<br><br>The device, called a TLB is usually inside the MMU and consists of a small number of entries, eight in this example, but rarely more than 64.",
+                      "<br><br>Each entry contains information about one page, including the virtual page number, a bit that is set when the page is modified, the protection code (read/write/execute permissions), and the physical page frame in which the page is located. These fields have a one-to-one correspondence with the fields in the page table.",
+                      ""
+                      ]
+       },
+       {
+           "question": "What are Page Replacement algorithms?",
+           "answer": ["When a page fault occurs, the operating system has to choose a page to remove from memory to make room for the page that has to be brought in.",
+                      "<br><br>If the page to be removed has been modified while in memory, it must be rewritten to the disk to bring the disk copy up to date. Ideally, the page which will be used at the most later point in future should be replaced. But this is impossible to implement.",
+                      "<br><br>Given below are some of the algorithms used in real systems.",
+                      "<br><br><b>Not Recently used</b>",
+                      "<br><b>FIFO</b>",
+                      "<br><b>Second Chance algorithm</b>",
+                      "<br><b>Clock Page Replacement Algorithm</b>",
+                      "<br><b>Least Recently Used (LRU)</b>",
+                      "<br><b>Working set Page replacement algorithm</b>",
+                      ""
+                      ]
+       }
   ]
 }
