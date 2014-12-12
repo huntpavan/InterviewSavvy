@@ -2,7 +2,7 @@
 <resources>
     <color name="green">#99CC00</color>
     <color name="green_actionbar">#ff88cc79</color>
-    <color name="light_green">#ffe3ffe3</color>
+    <color name="light_green">#fff0ffeb</color>
     <color name="orange">#ffff725e</color>
     <color name="purple">#ffAA66CC</color>
     <color name="yellow"> #ffFFBB33</color>

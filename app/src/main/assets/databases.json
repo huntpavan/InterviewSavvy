@@ -18,6 +18,11 @@
                   "<br><br><b>Examples of RDBMS:</b> MySQL, Oracle, Microsoft SQL Server, IBM DB2."]
      },
      {
+       "question": "What is E-R Model?",
+       "answer": ["A data model based on real world where basic objects are called entities and relationships are defined between them.",
+                  ""]
+     },
+     {
        "question": "What is SQL (Structured Query Language)?",
        "answer": ["It is a language used to manage data stored in an RDBMS."]
      },
@@ -43,6 +48,37 @@
                   "multiple tables with relationships is called Normalization."]
      },
      {
+       "question": "What is 1 NF (Normal Form)?",
+       "answer": ["The domain of attribute must include only atomic i.e simple and indivisible values.",
+                  ""]
+     },
+     {
+       "question": "What is 2 NF (Normal Form)?",
+       "answer": ["A relation schema R is in 2 NF if it is in 1 NF and every non-prime attribute A in R is fully functionally dependent on primary key.",
+                  "<br><br>",
+                  "A functional dependency X -> Y is full functional dependency if removal of any attribute from X means that the dependency does not hold any more.",
+                  ""]
+     },
+     {
+       "question": "What is 3 NF (Normal Form)?",
+       "answer": ["A relation schema R is in 3 NF if it is in 2 NF and for every functional dependency X -> A either of the following is true",
+                  "<br><br>",
+                  "X is a Super-key of R.",
+                  "<br>",
+                  "A is a prime attribute of R.",
+                  ""]
+     },
+     {
+        "question": "What is BCNF (Boyce-Codd Normal Form)?",
+        "answer": ["A relation schema R is in BCNF if it is in 3 NF and satisfies an additional constraint that for every functional dependency X -> A, X must be a candidate key.",
+                   ""]
+     },
+     {
+        "question": "What is 4 NF (Normal Form)?",
+        "answer": ["A Table is in 4NF if and only if, for every one of its non-trivial multivalued dependencies X -> Y, X is a superkey i.e. X is either a candidate key or a super set thereof.",
+                   ""]
+     },
+     {
         "question": "What is a Primary Key?",
         "answer": ["A primary key is a column whose values uniquely identify every row in a table. ",
                    "Primary key values can never be reused.",
@@ -61,6 +97,27 @@
         "question": "What is a Composite Key?",
         "answer": ["A composite key is a combination of two or more columns in a table that can ",
                    "be used to uniquely identify each row in the table."]
+     },
+     {
+       "question": "What are database constraints?",
+       "answer": ["Constraints are used to prevent the database from losing internal and external integrity.",
+                  "<br><br>",
+                  "Types of constraints: check, not null, unique, primary key, and foreign key.",
+                  ""]
+     },
+     {
+       "question": "What is Referential Integrity constraint?",
+       "answer": ["Referential integrity is a database concept that ensures that relationships between tables remain consistent.",
+                  "<br><br>",
+                  "When one table has a foreign key to another table, the concept of referential integrity states that you may not add a record to the table that contains the foreign key unless there is a corresponding record in the linked table.",
+                  "<br><br>",
+                  "It also includes the techniques known as cascading update and cascading delete, which ensure that changes made to the linked table are reflected in the primary table.",
+                  ""]
+     },
+     {
+       "question": "Describe the difference between primary keys and foreign keys?",
+       "answer": ["Primary keys are at least one column in a table that identify specific rows in that same table.  Foreign keys are columns in a table that identify rows in a different table.",
+                  ""]
      },
      {
         "question": "What is an SQL Insert statement?",
@@ -94,7 +151,7 @@
                    "<br><br>Materialized views get updated on specific duration, base upon the interval specified in the query definition."]
      },
      {
-        "question": "What are the advantages and disadvantages of views in a database?",
+        "question": "What are the advantages and disadvantages of Views in a database?",
         "answer": ["<b>Advantages:</b>",
                    "<br>Views doesn't store data in a physical location.",
                    "<br><br>View can be use to hide some of the columns from the table.",
@@ -122,10 +179,44 @@
                    "<br><br>The main disadvantages are slower writes and increased storage space for tables with Indexes."]
      },
      {
+       "question": "Give examples of different types of Indexing?",
+       "answer": ["Binary search style indexing",
+                  "<br>",
+                  "B-Tree indexing",
+                  "<br>",
+                  "Inverted list indexing",
+                  "<br>",
+                  "Memory resident table",
+                  "<br>",
+                  "Table indexing",
+                  ""]
+     },
+     {
+       "question": "What is the difference between clustered and non-clustered index?",
+       "answer": ["Both stored as B-tree structure. The leaf level of a clustered index is the actual data where as leaf level of a non-clustered index is pointer to data.",
+                  ""]
+     },
+     {
         "question": "What is the difference between DELETE, TRUNCATE and DROP?",
         "answer": ["The DELETE command is used to remove rows from a table. A WHERE clause can be used to only remove some rows. If no WHERE condition is specified, all rows will be removed. After performing a DELETE operation you need to COMMIT or ROLLBACK the transaction to make the change permanent or to undo it.",
                    "<br><br>TRUNCATE removes all rows from a table. The operation cannot be rolled back. As such, TRUNCATE is faster and doesn't use as much undo space as a DELETE.",
                    "<br><br>The DROP command removes a table from the database. All the tables' rows,  indexes and privileges will also be removed. The operation cannot be rolled back."]
+     },
+     {
+       "question": "What is Query Optimization?",
+       "answer": ["It refers to identifying an efficient execution plan for evaluating a query that has the least estimated cost.",
+                  ""]
+     },
+     {
+       "question": "What is a Cursor?",
+       "answer": ["A Cursor is a database object that represents a result set and is used to manipulate data row by row. When a cursor is opened, it is positioned on a row and that row is available for processing.",
+                  ""]
+     },
+     {
+       "question": "What are the different types of Cursors?",
+       "answer": ["<b>Dynamic Cursor:</b> It reflects changes happened on the table while scrolling through the row.",
+                  "<br><br>",
+                  "<b>Static Cursor:</b>  It works on snapshot of record set and disconnects from the server."]
      }
   ]
 }

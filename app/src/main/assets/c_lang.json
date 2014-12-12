@@ -1,14 +1,244 @@
 {
-  "name": "C Language",
+  "name": "C Programming",
   "logo": "C",
   "qalist": [
      {
-       "question": "C some question - 1",
-       "answer": ["C some answer - 1"]
+       "question": "What is C language?",
+       "answer": ["C is a general-purpose, block structured, procedural, imperative computer programming language developed in 1972 by Dennis Ritchie at the Bell Telephone Laboratories for use with the Unix operating system.",
+                  "<br><br>Block structured means that all the code is in terms of blocks (between { and }).",
+                  "<br><br>Procedural means all the work is done in terms of procedure calls (method calls i.e. all code is in some method or another).",
+                  "<br><br>Imperative means that the program is in terms of statements. (one after another).",
+                  ""]
      },
      {
-       "question": "C some question - 2",
-       "answer": ["C some answer - 2"]
-     }
+       "question": "What are basic C operators?",
+       "answer": ["The basic operators are arithmetic, logical, relational, and assignment. Binary operators take two operands, one on each side of the operator. Unary operators take one operand.",
+                  "<br><br><b>Arithmetic:</b> a+b, a-b, a*b, a/b, a%b, ++a, a++, --a, a--.",
+                  "<br><br><b>Logical:</b> a&&b, a||b, !a.",
+                  "<br><br><b>Relational:</b> a<b, a>b, a<=b, a>=b, a!=b.",
+                  "<br><br><b>Assignment:</b> lvaue = expr, lvalue += expr (similarly -=, *=, /=, %=).",
+                  ""]
+     },
+     {
+       "question": "What are the Bitwise Operators:",
+       "answer": ["And (&, &=)",
+                  "<br><br>Or (|, |=)",
+                  "<br><br>Xor (^, ^=)",
+                  "<br><br>Right shift (>>, >>=)",
+                  "<br><br>Left shift (<<, <<=)",
+                  "<br><br>Ones compliment (~)",
+                  ""]
+     },
+     {
+       "question": "What are the Keyboard/Screen/File IO functions?",
+       "answer": ["The library stdio.h contains prototypes for the functions scanf, puts, gets and getchar which are used to get data from the keyboard and print data to the console screen. Here are the basic functions:",
+                  "<br><br>printf, fprintf",
+                  "<br><br>scanf, fscanf",
+                  "<br><br>puts, fputs",
+                  "<br><br>putchar, fputchar",
+                  "<br><br>gets, fgets",
+                  "<br><br>getchar, fgetc",
+                  ""]
+     },
+     {
+       "question": "What are the Conditional Statements?",
+       "answer": ["Conditional statements are used to skip some statements depending on a test of some sort.",
+                  "<br><br><b>if-else:</b> Test a condition and if true execute the is_true_block, otherwise execute the not_true_block.  The else is optional.",
+                  "<br><br><b>Switch:</b> Jump immediately to a block of code depending on the value of an integer expression or  variable.",
+                  "<br><br><b>?: operator:</b> This is a simplified if-else operator that has a value.  It is useful for simple test conditions.  expr1 is evaluated and if it is non-zero, then true_expr is executed and becomes the value of the whole expression, otherwise false_expr is executed and becomes the value.
+                  "<br><b>expr1 ? true_expr : false_expr </b>",
+                  ""]
+     },
+     {
+       "question": "What are the Loop Statements?",
+       "answer": ["It is often necessary to repeat the same block of C code multiple times. Loop statements are useful in such cases.",
+                  "<br><br><b>while</b>",
+                  "<br><br><b>do while</b>",
+                  "<br><br><b>for</b>",
+                  ""]
+     },
+     {
+       "question": "What do break and continue keywords do?",
+       "answer": ["<b>break:</b> When this statement is encountered, the program immediately exits the current control structure (while, for, do-while, or switch).  Execution continues with the first statement after the control structure.",
+                  "<br><br><b>continue:</b> This statement causes control to immediately branch back to the beginning of a for-, while-, or do-while-loop.",
+                  ""]
+     },
+     {
+       "question": "What is a Static variable?",
+       "answer": ["Static is an access qualifier that limits the scope but causes the variable to exist for the lifetime of the program. This means a static variable is one that is not seen outside the function in which it is declared but which remains until the program terminates.",
+                  "<br><br> It also means that the value of the variable persists between successive calls to a function. The value of such a variable will remain and may be seen even after calls to a function. One more thing is that a declaration statement of such a variable inside a function will be executed only once.",
+                  ""]
+     },
+     {
+       "question": "What is a pointer?",
+       "answer": ["A pointer is a way to get at another object or variable. A pointer is actually just an address of where an instance is held in memory.",
+                  ""]
+     },
+     {
+       "question": "What is a Structure?",
+       "answer": ["In C, a  structure is a derived data type consisting of a collection of member elements and their data types.",
+                  "<br><br>Structure in C is like a class in oops. It can define both data (property) and behavior (methods), except that the access modifier is public.",
+                  "<br><br>It depends on the compilers whether you can have methods in C or not.",
+                  ""]
+     },
+     {
+       "question": "What is a Union?",
+       "answer": ["A union type variable is like a structure that can store objects of different types at different times; however, at any given moment it stores an object of only one of the specified types.",
+                  "<br><br>The declaration of a union type must specify all the possible different types that may be stored in the variable. The form of such a declaration is similar to declaring a structure template.",
+                  ""]
+     },
+     {
+       "question": "What the advantages of using Unions?",
+       "answer": ["Unions conserves memory space. The amount of space allocated for union is based on the member which requires largest memory space.",
+                  "<br><br>So unions are useful for applications involving number of variables, where values need not be assigned to all elements at one time.",
+                  ""]
+     },
+     {
+       "question": "What are the differences between Structures and Arrays?",
+       "answer": ["Arrays are collections of data items of same type. Structures are complex data items that can be made up of data items of different types, including, potentially, other structures and arrays. You can, of course, also have arrays of structures.",
+                  ""]
+     },
+     {
+       "question": "What are the C Storage Classes?",
+       "answer": ["Every C variable has a storage class and a scope. The storage class determines the part of memory where storage is allocated for a variable and how long the storage allocation continues to exist. It also determines the scope which specifies the part of the program over which a variable name is visible, i.e. the variable is accessible by name. The are four storage classes in C. They are:",
+                  "<br><br><b>Automatic variables:</b> They are declared at the start of a block. Memory is allocated automatically upon entry to a block and freed automatically upon exit from the block. The scope of automatic variables is local to the block in which they are declared, including any blocks nested within that block. For these reasons, they are also called  local variables. No block outside the defining block may have direct access to automatic variables, i.e. by name. Of course, they may be accessed indirectly by other blocks and/or functions using pointers.",
+                  "<br><br><b>Register variables:</b> Register variables are a special case of automatic variables. Automatic variables are allocated storage in the memory of the computer; however, for most computers, accessing data in memory is considerably slower than processing in the CPU. These computers often have small amounts of storage within the CPU itself where data can be stored and accessed quickly. These storage cells are called  registers.",
+                  "<br><br><b>External variables:</b> They may be declared outside any function block in a source code file the same way any other variable is declared; by specifying its type and name. No storage class specifier is used - the position of the declaration within the file indicates external storage class. Memory for such variables is allocated when the program begins execution, and remains allocated until the program terminates. For most C implementations, every byte of memory allocated for an external variable is initialized to zero",
+                  "<br><br><b>Static variables:</b> The storage class, static, similarly provides a lifetime over the entire program, however; it provides a way to limit the scope of such variables, Static storage class is declared with the keyword static as the class specifier when the variable is defined.",
+                  ""]
+     },
+     {
+       "question": "What is difference between variable declaration and definition?",
+       "answer": ["<b>Variable declaration:</b> To give information about the variable, like its name and its type",
+                  "<br><br><b>Variable definition:</b> Allocation of storage for a variable is its definition.",
+                  "<br><br>For automatic and register variables, there is no difference between definition and declaration. When you say int a; inside a block both declaration and definition is taking place.",
+                  "<br><br>External variables may be defined and declared with a declaration statement outside any function, with no storage class specifier. Such a declaration allocates memory for the variable.",
+                  "<br><br>A declaration statement may also be used to simply  declare a variable name with the extern storage class specifier at the beginning of the declaration. Such a declaration specifies that the variable is  defined elsewhere, i.e. memory for this variable is allocated in another file. ",
+                  "<br><br>Thus, access to an external variable in a file other than the one in which it is  defined is possible if it is  declared with the keyword extern; no new memory is allocated. Such a declaration tells the compiler that the variable is defined elsewhere, and the code is compiled with the external variable left unresolved. The reference to the external variable is resolved during the linking process.",
+                  "",
+                  ]
+     },
+     {
+       "question": "Are functions are declared or defined in a header file?",
+       "answer": ["In header files the functions are declared not defined. Function declaration means giving the information about the function like its name, types of aruguments (or parameters) and its return type. Function definition apart from the declaration, it also specifies the code (behavior) of the function.",
+                  ""]
+     },
+     {
+       "question": "What are the differences between malloc() and calloc()?",
+       "answer": ["Malloc allocates bytes of memory. It takes a single argument i.e. memory required in bytes. Ex: Allocating memory for an integer array of size 10: int* var = (int*) malloc(10 * sizeof(int)). It does not initialize the memory allocated.",
+                  "<br><br>Calloc allocates block of memory. It takes two arguments i.e. number of variables to allocate memory, size in bytes of a single variable. Ex: int* var = (int*)calloc(sizeof(int),10). It initializes the memory to zeros",
+                  "<br><br>Calloc(m, n) is essentially equivalent to p = malloc(m * n); memset(p, 0, m * n);",
+                  ""]
+     },
+     {
+       "question": "What are Preprocessor Directives?",
+       "answer": ["Preprocessor directives are lines included in the code of our programs that are not program statements but directives for the preprocessor. These lines are always preceded by a hash sign (#).",
+                  "<br><br>The preprocessor is executed before the actual compilation of code begins, therefore the preprocessor digests all these directives before any code is generated by the statements.These preprocessor directives extend only across a single line of code. As soon as a newline character is found, the preprocessor directive is considered to end.",
+                  "<br><br>No semicolon (;) is expected at the end of a preprocessor directive. The only way a preprocessor directive can extend through more than one line is by preceding the newline character at the end of the line by a backslash (\). The different types of directives are:",
+                  "<br><br>macro definitions (#define, #undef)",
+                  "<br><br>Conditional inclusions (#ifdef, #ifndef, #if, #endif, #else and #elif)",
+                  "<br><br>Line control (#line)",
+                  "<br><br>Error directive (#error)",
+                  "<br><br>Source file inclusion (#include)",
+                  "<br><br>Pragma directive (#pragma)",
+                  ""]
+     },
+     {
+       "question": "What are macros? What are the advantages and disadvantages?",
+       "answer": ["Macro is a Pre-processor.",
+                  "<br><br>Ex: #define ARRAY_SIZE 100; This replaces ARRAY_SIZE with 100 anywhere in the program.",
+                  "<br><br>EX: #define SQR(x) (x * x); Here x is a parameter and replaces any expression like SQR(x) with square of x i.e. if SQR(2) is used in the code, then it is replaced by 4.",
+                  "<br><br>The main advantage of using the macro is the speed of the execution of the program (if macro is not used in the program many times or if the program is small). The main disadvantage of the macro is it increase the size of the program because the pre-processor will replace all the macro name in the program by it actual definition before the compilation of the program.",
+                  ""]
+     },
+     {
+       "question": "What is Casting?",
+       "answer": ["C type casting is used to tell the C compiler to treat a variable as of a different type in a specific context. The compiler will automatically change one type of data into another if it makes sense. ",
+                  "<br><br>For instance, if you assign an integer value to a floating-point variable, the compiler will insert code to convert the int to a float. Casting allows you to make this type conversion explicit, or to force it when it would not normally happen.",
+                  "<br><br>Ex: long int foo = 314159265L;",
+                  "<br>double bar = foo; //implicit casting",
+                  "<br>IsLowerCase = islower((unsigned char)*p); //explicit casting",
+                  ""]
+     },
+     {
+       "question": "What is the difference between char *a and char a[]?",
+       "answer": ["char a[] = \"string\";",
+                  "<br><br>char *a = \"string\";",
+                  "<br><br>The declaration char a[] asks for space for 7 characters and see that its known by the name "a". In contrast, the declaration char *a, asks for a place that holds a pointer, to be known by the name "a". This pointer "a" can point anywhere. In this case its pointing to an anonymous array of 7 characters, which does have any name in particular. Its just present in memory with a pointer keeping track of its location",
+                  ""]
+     },
+     {
+       "question": "What is a memory leak?",
+       "answer": ["Memory leak is unintentional memory consumption by a computer program, where the program fails to release the memory when no longer needed. This condition is normally the result of a bug in a program that prevents it from freeing up memory that it no longer needs.",
+                  ""]
+     },
+     {
+       "question": "What is the difference between pass by reference and pass by value?",
+       "answer": ["Pass by value means we are passing the values in local variables which may loose their value due to stack operation.",
+                  "<br><br>Pass by reference means we are sending the addresses of the variables. So they will retain their values.",
+                  "<br><br>In Pass by value, the value changed in the variables in called function are not reflected in the same variables in calling function whereas in call by reference, it is reflected. Call by reference uses aliases to the variables. Reference means alias.",
+                  ""]
+     },
+     {
+       "question": "What is the difference between arrays and linked list?",
+       "answer": ["Linked list consists of data nodes, each pointing to the next in the list. An array consists of contiguous chunks memory of predetermined size.",
+                  "<br><br>Linked lists are quite flexible. They can grow to any size -- up to resource (memory) limits -- and each node can be a different size. Memory allocation for a node is done as needed, usually when a new node is added. Linked lists can be circular, or doubly-linked (pointers forward and backward), and new nodes can be inserted anywhere in the chain. The greatest downside to linked lists is sequential access: to find any node in memory, each previous node must be examined and the pointers followed. Linked lists are also more complex to program and manage.",
+                  "<br><br>Arrays are fixed in size, so resources must be anticipated and consumed in advance. Each element is the same size and must contain the same data type. But access to a particular element is very fast, because its location in memory can be determined mathematically and accessed directly (offset from start of array = subscript * element size).",
+                  "<br><br>Note that modern languages -- especially OO languages such as C++ and Java -- blur this distinction by providing classes which offer the best of both worlds. Arrays can grow; linked list complexity is hidden from the programmer; hash tables (special arrays, really) allow for rapid indexing of arbitrary data. But under the hood, each complex data type is implemented using primitives such as arrays and linked lists.",
+                  ""]
+     },
+     {
+       "question": "What are enumerations (enum)?",
+       "answer": ["An enumeration is a type that can hold a set of constant values that are defined by the user. Once you define an enumeration you can use it like integer types.",
+                  "<br><br>Ex: enum {OFF, ON};The enum defines two integer constants called enumerators and these constants are assigned values by default. The value assigned to OFF = 0 and ON = 1. The above is an unnamed enumeration, however an enum can be named.E.g. enum STATE {OFF, ON};Each enumeration is a distinct type and the type of the enumeration is the enumerator. For example OFF is of type STATE.",
+                  "<br><br>An enumerator can optionally be initialized by a constant expression of integral type. Ex: enum {WHITE = 3, BLACK = 5}; A value of an integral type can be converter to an enumeration type. This needs to be done explicitly. The results are undefined unless the value is within the range of the enumeration. Ex: enum COLORS {RED = 1; BLUE = 3, WHITE = 7}; COLORS c1 = COLORS (5); All enumerators are converted to integral type for any arithmetic operation.",
+                  ""]
+     },
+     {
+       "question": "What is the use of typedef?",
+       "answer": ["It allows you to introduce synonyms for types which could have been declared some other way. The new name becomes equivalent to the type that you wanted.",
+                  ""]
+     },
+     {
+       "question": "Out of fgets() and gets() which function is safe to use and why?",
+       "answer": ["<b>gets():</b> It is a method to get some input from the user/keyboard. char *gets(char *s); It takes one and only parameter and it is a char pointer. gets() does not know how big the array is, and it is impossible to determine this from the pointer alone. If the user enter more characters than expected, gets() will not stop writing at the end of the array. Instead, it continues writing past the end and into memory it doesn't own.",
+                  "<br><br><b>fgets():</b> fgets() is a buffer safe function. char *fgets(char *s, int size, FILE *stream); ",
+                  "<br><br>",
+                  ""]
+     },
+     {
+       "question": "Difference between strdup and strcpy?",
+       "answer": ["Both these functions are used to create copies of strings.",
+                  "<br><br><b>strcpy</b> - copy a string to a location you created (you create the location i.e. allocate memory, make sure that the source string will have enough room there and afterwards use strcpy to copy)",
+                  "<br><br><b>strdup</b> - copy a string to a location that will be created by the function. The function will allocate space, make sure that your string will fit there and copy the string. Will return a pointer to the created area.",
+                  ""]
+     },
+     {
+       "question": "What is recursion?",
+       "answer": ["A recursive procedure or routine is one that has the ability to call itself. This usually means that it has the capability to save the condition it was in or the particular process it is serving when it calls itself (otherwise, any variable values that have been developed in executing the code are overlaid by the next iteration or go-through).",
+                  "<br><br>Typically, this is done by saving values in registers or data area stacks before calling itself or at the beginning of the sequence where it has just been reentered.",
+                  ""]
+     },
+     {
+       "question": "",
+       "answer": ["",
+                  "<br><br>",
+                  "<br><br>",
+                  ""]
+     },
+     {
+       "question": "",
+       "answer": ["",
+                  "<br><br>",
+                  "<br><br>",
+                  ""]
+     },
+     {
+       "question": "",
+       "answer": ["",
+                  "<br><br>",
+                  "<br><br>",
+                  ""]
+     },
   ]
 }

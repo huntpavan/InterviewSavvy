@@ -7,8 +7,11 @@
        "answer": ["C++ some answer - 1"]
      },
      {
-       "question": "C++ some question - 2",
-       "answer": ["C++ some answer - 2"]
-     }
+       "question": "",
+       "answer": ["",
+                  "",
+                  "",
+                  ""]
+     },
   ]
 }
