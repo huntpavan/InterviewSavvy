@@ -1,0 +1,168 @@
+{
+  "name": "OOP",
+  "logo": "O",
+  "qalist": [
+     {
+       "question": "What is Object Oriented Programming?",
+       "answer": ["OOP is a programming paradigm that uses objects and their interactions to design applications and computer programs.",
+                  ""]
+     },
+     {
+       "question": "What are the main principals of OOP?",
+       "answer": ["Class, Object, Polymorphism, Abstraction, Inheritance and Encapsulation.",
+                  ""]
+     },
+     {
+       "question": "What is a Class?",
+       "answer": ["Class defines the characteristics of an entity in the world (i.e. its attributes and behavior).",
+                  ""]
+     },
+     {
+       "question": "What is an Object?",
+       "answer": ["An Object is an instance of a class.",
+                  ""]
+     },
+     {
+       "question": "What is Abstraction?",
+       "answer": ["Abstraction is the purposeful hiding of some details of a process or artifact, in order to bring out more clearly other aspects, details, or structure.",
+                  "<br><br>Interfaces are an example of abstraction. Client server models are also another example. All the client needs to know is the methods put forward in the interface and the details of implementation and variables involved in the method are not relevant to the client.",
+                  ""]
+     },
+     {
+       "question": "What is Encapsulation?",
+       "answer": ["Encapsulation provides a way to protect data from intentional or accidental corruption. Access modifiers like private, protected help in encapsulating data. ",
+                  "<br><br>Accessors and Mutators (get and set functions) and Properties (with get and set code blocks) also are helpful.",
+                  ""]
+     },
+     {
+       "question": "What is Inheritance?",
+       "answer": ["A new class can be defined based on a class already defined. The new class is the child class and the existing class is base or parent class. Reuse of code and Reuse of concept are the advantages in inheritance.",
+                  ""]
+     },
+     {
+       "question": "What are major forms of Polymorphism?",
+       "answer": ["Overloading, Overriding, Polymorphic variable and Generics.",
+                  ""]
+     },
+     {
+        "question": "What is Overloading?",
+        "answer": ["One name that refers to two or more different implementations.",
+                   "<br><br>Method overloading is the practice of declaring the same method with different signatures. The same method name will be used with different number of parameters or parameters of different type. But overloading of methods with different return types is not allowed.",
+                   ""]
+      },
+      {
+        "question": "What is Overriding?",
+        "answer": ["A child class redefining a method inherited from a parent class.",
+                   ""]
+      },
+      {
+        "question": "What is Polymorphic Variable?",
+        "answer": ["A variable that can hold different types of objects during the course of execution. It is called Pure Polymorphism when a polymorphic variable is used as a parameter. ",
+                   "<br><br>It allows a variable to refer to more than one type of object. When a method is invoked using a polymorphic variable, the method that is called depends upon the exact type of object stored in the polymorphic variable. This is done i.e. the real type of object is determined, at runtime.",
+                   ""]
+      },
+      {
+        "question": "What are Generics (Templates)?",
+        "answer": ["A way of creating general tools or classes by parameterizing on types.",
+                   ""]
+      },
+      {
+       "question": "What is Base class, Sub class and Super class?",
+       "answer": ["Base class is the most generalised class in a class structure. Most applications have such root classes. In Java , Object is the base class for all classes. For C# its System.Object class.",
+                  "<br><br> Subclass is a class that inherits from one or more classes.",
+                  "<br><br>Superclass is a class from which another class inherits.",
+                  ""]
+     },
+     {
+       "question": "What is Binding?",
+       "answer": ["Binding denotes association of a name with a type (or class).",
+                  "<br><br><b>Static binding</b> is a binding in which the type association is made during compile time. This is also called as Early binding.",
+                  "<br><br><b>Dynamic binding</b> is a binding in which the type association is not made until the object is created at execution time. It is also called as Late binding.",
+                  ""]
+     },
+     {
+       "question": "What are the differences between the OOP languages C++ and Java?",
+       "answer": ["<b>Virutal Machine: </b>Java is compiled to virtual machine byte-code and requires a virtual machine to run. C++ is compiled to native machine code. This usually makes C++ faster, but it gives Java greater potential for portability and security.",
+                  "<br><br><b>GC: </b>Java replaces programmer memory deallocations with garbage collection, where as in C++ the programmer has to take care of it.",
+                  "<br><br><b>Multiple Inheritance: </b>Java further dispenses with C++ features such as operator overloading (present in C#) and multiple inheritance. These choices are seen by some to make Java a better choice for rapid development and for projects where portability and security are more important than performance.",
+                  "<br><br><b>Pass by reference: </b>In Java, all objects are passed by reference (except the basic types, they are passed by value), whereas in C++, the default behavior is to pass objects by value.",
+                  "<br><br><b>Virtual methods: </b>In Java, all methods are virtual, meaning the implementation for a method is selected according to the type of the object as opposed to the type of the reference.",
+                  "<br><br><b>Low-level access: </b>C++ has certain benefits, especially when low-level system access is required. In situations where portability, security, and speed of development are emphasized, Java (or a similar language such as C#) may be a better choice.",
+                  "<br><br><b>Friend classes: </b>C++ have the concept of friend classes whereas Java has nested classes to achieve the same functionality.",
+                  ""]
+     },
+     {
+       "question": "What are the differences between the OOP languages C# and Java?",
+       "answer": ["<b>Pointers: </b>There is the concept of pointers in C# but not at all in Java.",
+                  "<br><br><b>Main method: </b>In Java the main method is a public static method named 'main' which accepts an array of String objects as arguments and returns no value. In C#, the main method is the public static method called 'Main' (with capital M), which also accepts an array of String objects and returns no value, as given in the following signature. If you are not passing anything to the Main method, you can use an overload of Main, the one without an argument list. As a comparison, overloading the main method is illegal in Java.",
+                  "<br><br><b>Operator Overloading: </b>There is operator overloading in C# but not in Java.",
+                  ""]
+     },
+     {
+       "question": "What are the differences between C and C++?",
+       "answer": ["<b>OOP:</b> C++ is an object oriented programming language with classes and objects. Whereas C is a structural procedural language.",
+                  "<br><br><b>Type checking:</b> Type checking is rigid in C++. You can implicitly assign from a void* to any other type in C but not in C++ as it is not type safe.",
+                  "<br><br><b>Bool:</b> No boolean type in C. enums are used to simulate it. C++ has bool.",
+                  "<br><br><b>(malloc and free) & (new and delete):</b>  In C, there's only one major memory allocation function: malloc. You can use it to allocate both single elements and arrays.  And you always release the memory using free.  In C++, however, memory allocation for arrays is somewhat different than for single objects; you use the new[] operator, and you must match calls to new[] with calls to delete[].",
+                  ""]
+     },
+     {
+       "question": "What are the differences between malloc and new?",
+       "answer": ["malloc is a function and new is an operator. Both are used to allocate memory.",
+                  "<br><br>Apart from allocating memory like malloc, new also calls the constructor of the object for which it is allocating memory.",
+                  "<br><br>malloc may fail and return a NULL pointer. New never returns a NULL pointer, instead it throws an exception.",
+                  "<br><br>malloc requires a type casting during declaration whereas new doesn't require it.",
+                  "<br><br>malloc's counterpart is 'free'. new's counterpart is 'delete'.",
+                  ""]
+     },
+     {
+       "question": "What are Friend class and method in C++?",
+       "answer": ["The friend keyword is applied to either a function or a class. It gives the friend function or friend class access to the private members of the class in which the declaration occurs.",
+                  "<br><br>Java and C# do not support the concept of friend classes, they do support nested classes, and nested classes have access to their enclosing class's private data and methods. Nested classes can therefore take the place of friend classes in many instances.",
+                  ""]
+     },
+     {
+       "question": "What is a Constructor and Destructor?",
+       "answer": ["Constructors and destructors are special member functions of classes that are used to construct and destroy class objects.",
+                  "<br><br>Construction may involve memory allocation and initialization for objects. Destruction may involve cleanup and deallocation of memory for objects.",
+                  ""]
+     },
+     {
+       "question": "What is a Virtual function?",
+       "answer": ["A virtual function is a member function of the base class and which is redefined by the derived class. When a derived class inherits the class containing the virtual function, it has ability to redefine the virtual functions.",
+                  "<br><br>The virtual functions are resolved at the run time. This is called dynamic binding. The functions which are not virtual are resolved at compile time which is called static binding.",
+                  "<br><br>In Java, all functions are virtual by default. In C# we have to specify 'virtual' to the method in base class and 'override' to the method in child class. In C++, we have to specify 'virtual' to the method in base class and thats enough (no override keyword like C#).",
+                  ""]
+     },
+     {
+       "question": "What is an Abstract class and Interface?",
+       "answer": ["Abstract class is a class that contains atleast one abstract method (method that is declared but not implemented). It cannot be instantiated and has to be inherited to use it. Interface on the other hand contains only signatures of methods, delegates or events. The implementation of the methods is done in the class that implements the interface.",
+                  "<br><br>In abstract classes we can use all accessibility modifiers, where as interfaces can only use public for its members.",
+                  "<br><br>Interfaces are used for abstraction whereas classes are used for encapsulation. Use interface when you want to make the class that is implementing it less dependent on your code. This results in independent (high cohesion and low coupling) modules.",
+                  "<br><br>Use abstract classes when you need more features than an interface. If you want more class like features like method definitions, data variables and access modifiers, then go for abstract classes.",
+                  ""]
+     },
+     {
+       "question": "What are Delegates and Events in C#?",
+       "answer": ["A delegate in C# is similar to a function pointer in C or C++. Using a delegate allows the programmer to encapsulate a reference to a method inside a delegate object. The delegate object can then be passed to code which can call the referenced method, without having to know at compile time which method will be invoked.",
+                  "<br><br><b>Multicast Delegate:</b> A delegate that has multiple handlers assigned to it.  Each assigned handler (method) is called.",
+                  "<br><br><b>Events:</b> The basic foundation behind this programming model is the idea of publisher and subscribers. You have publishers who will do some logic and publish an event. Publishers will then send out their event only to subscribers who have subscribed to receive the specific event. In C#, any object can publish a set of events to which other applications can subscribe. When the publishing class raises an event, all the subscribed applications are notified.",
+                  "<br><br>In Java, there are no delegates. The work of delegates is accomplished by inner classes.",
+                  ""]
+     },
+     {
+       "question": "What is the difference between Class variables and Instance variables?",
+       "answer": ["When a number of objects are created from the same class blueprint, they each have their own distinct copies of instance variables. Each object has its own values for these variables, stored in different memory locations. These are instance variables.",
+                  "<br><br>Sometimes, you want to have variables that are common to all objects. This is accomplished with the static modifier. Fields that have the static modifier in their declaration are called static fields or class variables. They are associated with the class, rather than with any object. These are class variables.",
+                  ""]
+     },
+     {
+       "question": "What are the different types of Static variables?",
+       "answer": ["In the C programming language and its descendants, the term static variable has at least three separate meanings, each related to the semantics of C's static keyword:",
+                  "<br><br><b>Static global variables</b> are declared as static at the top level of a source file. Such variables are not visible outside the source file (file scope), unlike variables declared as extern.",
+                  "<br><br><b>Static local variables</b> are declared inside a function, just like automatic local variables. They have the same scope as normal local variables, differing only in storage duration: whatever values the function puts into static local variables during one call will still be present when the function is called again.",
+                  "<br><br>C++ has <b>static member variables</b> in classes, member variables declared as static are class variables (as opposed to instance variables).",
+                  ""]
+     }
+  ]
+}

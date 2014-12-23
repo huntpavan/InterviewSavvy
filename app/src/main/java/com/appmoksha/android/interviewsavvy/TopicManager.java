@@ -28,7 +28,7 @@ public class TopicManager {
     private static TopicManager sTopicManager;
     private Context mAppContext;
     private List<String> mTopicJsonFiles = Arrays.asList(
-            "operating_systems.json", "networks.json", "databases.json");
+            "operating_systems.json", "networks.json", "databases.json", "c_lang.json", "oop.json");
 
     private TopicManager(Context appContext) {
         mAppContext = appContext;
